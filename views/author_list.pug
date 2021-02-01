@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1= title
+
+    ul
+      each auth in author_list
+        li
+          a(href=auth.url) #{auth.name}
+          |  (#{auth.date_birth_formatted} - #{auth.date_death_formatted})
+
+      else
+        li There are no authors.

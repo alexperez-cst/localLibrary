@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1 Author: #{author.name}
+
+    p #{author.date_birth_formatted} - #{author.date_birth_formatted}
+
+    hr
+    div(style='margin-left:20px;margin-top:20px')
+        h4 Books
+        each book in author_books
+          a(href=book.url) #{book.title}
+          p #{book.summary}
